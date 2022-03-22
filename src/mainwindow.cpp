@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 
-#define DB_PATH "../ExamManagement/db/exams.db"
+#define DB_PATH "../GradeRegister/db/exams.db"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow{parent},
