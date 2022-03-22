@@ -26,8 +26,9 @@ QVariant Teacher::data(const QModelIndex &index, int role) const
 bool Teacher::addItem(const QString &name, const QString &surname)
 {
     QSqlRecord rec = this->record();
-    rec.setValue(1, name);
-    rec.setValue(2, surname);
+    rec.remove(0);
+    rec.setValue(0, name);
+    rec.setValue(1, surname);
     this->insertRecord(-1, rec);
 
     if(this->submitAll())

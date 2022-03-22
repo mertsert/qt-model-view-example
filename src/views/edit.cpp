@@ -134,11 +134,11 @@ EditGrade::~EditGrade()
 
 void EditGrade::onGradeSave()
 {
-    qDebug() << "Saving" << resultSpinBox_->value() << " " << teacherComboBox_->currentIndex()
-             << " " << studentComboBox_->currentIndex();
+    qDebug() << "Saving" << resultSpinBox_->value() << " " << teacherComboBox_->currentIndex() +1
+             << " " << studentComboBox_->currentIndex() + 1;
 
-    if( model_->addItem(resultSpinBox_->value(),teacherComboBox_->currentIndex(),
-                        studentComboBox_->currentIndex()) )
+    if( model_->addItem(resultSpinBox_->value(),teacherComboBox_->currentIndex() + 1 ,
+                        studentComboBox_->currentIndex() + 1) )
     {
 
         QMessageBox::information(

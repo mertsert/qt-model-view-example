@@ -34,10 +34,11 @@ bool Grade::addItem(const int &result, const int &teacher, const int &student)
 {
     QSqlRecord rec = this->record();
     rec.remove(0);
-    rec.setValue(1, result);
-    rec.setValue(2, teacher);
-    rec.setValue(3, student);
+    rec.setValue(0, result);
+    rec.setValue(1, teacher);
+    rec.setValue(2, student);
     this->insertRecord(-1, rec);
+    qDebug() << "database error: " << this->lastError();
 
     if(this->submitAll())
     {

@@ -17,7 +17,7 @@ DbManager::DbManager(QString path, QObject *parent)
 
    qDebug() << "Database: connection ok";
 
-#ifdef TEST
+#ifdef DB_CREATED
     InitTables();
 #endif
 }
@@ -25,9 +25,9 @@ DbManager::DbManager(QString path, QObject *parent)
 void DbManager::InitTables()
 {
     QSqlQuery query{db_};
-    query.exec("create table student(student_id int primary key, name varchar(20), surname varchar(20) )");
-    query.exec("create table teacher(teacher_id int primary key, name varchar(20), surname varchar(20) )");
-    query.exec("create table result(result_id int primary key, result int, teacher_id int, student_id int)");
+    query.exec("create table student(student_id integer primary key autoincrement, name varchar(20) not null, surname varchar(20) not null)");
+    query.exec("create table teacher(teacher_id integer primary key autoincrement, name varchar(20) not null, surname varchar(20) not null)");
+    query.exec("create table result(result_id integer primary key autoincrement, result int, teacher_id int, student_id int)");
 
 }
 
