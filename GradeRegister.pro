@@ -14,8 +14,8 @@ SOURCES += \
         src/models/grade.cpp \
         src/models/student.cpp \
         src/models/teacher.cpp \
-        src/views/tabshow.cpp \
-        src/views/tabedit.cpp
+        src/views/display.cpp \
+        src/views/edit.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -28,5 +28,5 @@ HEADERS += \
     src/models/grade.h \
     src/models/student.h \
     src/models/teacher.h \
-    src/views/tabshow.h \
-    src/views/tabedit.h
+    src/views/display.h \
+    src/views/edit.h
