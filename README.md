@@ -12,13 +12,14 @@ Next, clone this repository and install dependencies:
 ```
 git clone https://github.com/mertsert/qt-model-view-example.git
 ```
-### Dependencies
+Dependencies :
   - Qt 5.12.4
-  - 
+  - MinGW-w64
+  - Sqlite
 
 Open `ExamManagement.pro` file with QtCreator Ide -> `Run qmake` and `Build` 
 
-##Views
+## Views
 
 Application start with main window:
 
@@ -26,11 +27,9 @@ Application start with main window:
 
 Adding Student or Teacher from Edit Window with their tabs:
 
-![EditWindow](./docs/teacherEdit.jpg "Edit")
-
+![EditWindow](./docs/teacherEdit.JPG "Edit")
 ![EditWindow](./docs/gradeAdd.jpg "Edit")
-
-![MessageBox](./docs/addSuccess.jpg "MessagBox")
+![MessageBox](./docs/addSuccess.JPG "MessagBox")
 
 Showing Student or Grades from Show Window with their tabs:
 
